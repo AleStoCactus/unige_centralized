@@ -39,7 +39,7 @@ int main()
         case 2:
             cout<<"Progetti ancora non disponibili...\n";
         case 3:
-            cout<<"https://github.com/AleStoCactus\n";
+            cout<<"https://github.com/AleStoCactus/unige_centralized\n";
         default:
             cout<<"Opzione non valida\n";
     }
