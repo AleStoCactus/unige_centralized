@@ -28,11 +28,8 @@ void Menu() {
     cout<<"3) Open Source\n\n";
 }
 
-int SCL() {
-    int scelta;
-    cin>>scelta;
-
-    switch (scelta) {
+void SCL(int scl) {
+    switch (scl) {
         case 1:
             cout<<"\nLink di Unige Informatica Megathread: \n";
             cout<<"https://www.notion.so/Unige-Informatica-Megathread-281732e65edc8095a21df1b5224b491e?source=copy_link\n";
@@ -48,15 +45,16 @@ int SCL() {
             cout<<"\nOpzione non valida\n";
             break;
     }
-
-    return 0;
 }
 
 int main()
 {
     Menu();
 
-    SCL();
+    int scelta;
+    cin>>scelta;
+
+    SCL(scelta);
 
     return 0;
 }
