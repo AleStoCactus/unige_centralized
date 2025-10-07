@@ -31,8 +31,10 @@ void Menu() {
 int main()
 {
     Menu();
+
     int scelta;
     cin>>scelta;
+
     switch (scelta) {
         case 1:
             cout<<"https://www.notion.so/Unige-Informatica-Megathread-281732e65edc8095a21df1b5224b491e?source=copy_link\n";
@@ -43,6 +45,5 @@ int main()
         default:
             cout<<"Opzione non valida\n";
     }
-
     return 0;
 }
