@@ -28,22 +28,35 @@ void Menu() {
     cout<<"3) Open Source\n\n";
 }
 
-int main()
-{
-    Menu();
-
+int SCL() {
     int scelta;
     cin>>scelta;
 
     switch (scelta) {
         case 1:
+            cout<<"\nLink di Unige Informatica Megathread: \n";
             cout<<"https://www.notion.so/Unige-Informatica-Megathread-281732e65edc8095a21df1b5224b491e?source=copy_link\n";
+            break;
         case 2:
-            cout<<"Progetti ancora non disponibili...\n";
+            cout<<"\nProgetti ancora non disponibili...\n";
+            break;
         case 3:
+            cout<<"\nLink del programma open source: \n";
             cout<<"https://github.com/AleStoCactus/unige_centralized\n";
+            break;
         default:
-            cout<<"Opzione non valida\n";
+            cout<<"\nOpzione non valida\n";
+            break;
     }
+
+    return 0;
+}
+
+int main()
+{
+    Menu();
+
+    SCL();
+
     return 0;
 }
