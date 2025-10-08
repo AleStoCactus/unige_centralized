@@ -2,8 +2,10 @@
 
 using namespace std;
 
-void Menu() {
-    cout<< "+========================================+\n";
+const string RESET   = "\033[0m";   // Reset
+
+void Menu1() {
+    cout<<"\033[1;37m"<< "+========================================+\n";
     cout<< "|  _   _    _  _    ___     ___     ___  |\n";
     cout<< "| | | | |  | || |  |_ _|   / __|   | __| |\n";
     cout<< "| | |_| |  | .` |   | |   | (_ |   | _|  |\n";
@@ -15,51 +17,67 @@ void Menu() {
     cout<<"| G E N O V A                      |\n";
     cout<<"+----------------------------------+\n\n";
 
-    cout<<"### Questo programma è stato creato per \n";
+    cout<<"\033[1;36m"<<"### Questo programma è stato creato per \n";
     cout<<"### centralizzare tutte le risorse utili \n";
     cout<<"### per il proseguimento del corso di \n";
     cout<<"### laurea triennale di Informatica \n";
-
-    cout<<"\n\nScegli una delle seguenti opzioni:\n";
-    cout<<"1) Link Unige Informatica Megathread\n";
-    cout<<"2) Progetti condivisi su GitHub\n";
-
-    cout<<"\nOpen source del programma:\n";
-    cout<<"3) Open Source\n\n";
 }
 
-void SCL(int scl) {
+void Menu2() {
+    cout<<"\033[1;91m"<<"\n\nScegli una delle seguenti opzioni:\n";
+    cout<<"\033[1;33m"<<"1) Link Unige Informatica Megathread\n";
+    cout<<"2) Progetti condivisi su GitHub\n";
+
+    cout<<"3) Open source del programma\n\n";
+
+    cout<<"4) Esci dal programma\n\n";
+}
+
+int SCL(int scl) {
     switch (scl) {
         case 1:
             system("clear"); //Sostituire cls se si vuole usare Windows.
-            cout<<"\nLink di Unige Informatica Megathread: \n";
-            cout<<"https://www.notion.so/Unige-Informatica-Megathread-281732e65edc8095a21df1b5224b491e?source=copy_link\n";
+            cout<<"\033[1;33m"<<"\nLink di Unige Informatica Megathread: \n";
+            cout<<RESET<<"https://www.notion.so/Unige-Informatica-Megathread-281732e65edc8095a21df1b5224b491e?source=copy_link\n";
             break;
         case 2:
             system("clear");
-            cout<<"\nProgetti ancora non disponibili...\n";
+            cout<<"\033[1;33m"<<"\nProgetti ancora non disponibili...\n\n";
             break;
         case 3:
             system("clear");
-            cout<<"\nLink del programma open source: \n";
-            cout<<"https://github.com/AleStoCactus/unige_centralized\n";
+            cout<<"\033[1;33m"<<"\nLink del programma open source: \n";
+            cout<<RESET<<"https://github.com/AleStoCactus/unige_centralized\n";
+            break;
+        case 4:
+            system("clear");
+            cout<<RESET;
             break;
         default:
             system("clear");
-            cout<<"\nOpzione scelta non valida\n";
+            cout<<"\033[1;91m"<<"\nOpzione scelta non valida\n\n";
             break;
-
     }
+
+    return scl;
 }
 
 int main()
 {
-    Menu();
+    Menu1();
+
+    tp:
+
+    Menu2();
 
     int scelta;
     cin>>scelta;
 
     SCL(scelta);
-
-    return 0;
+    if (scelta == 1 || scelta == 2 || scelta == 3) {
+        goto tp;
+    } else {
+        cout<<RESET;
+        return 0;
+    }
 }
