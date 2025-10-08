@@ -31,19 +31,24 @@ void Menu() {
 void SCL(int scl) {
     switch (scl) {
         case 1:
+            system("clear"); //Sostituire cls se si vuole usare Windows.
             cout<<"\nLink di Unige Informatica Megathread: \n";
             cout<<"https://www.notion.so/Unige-Informatica-Megathread-281732e65edc8095a21df1b5224b491e?source=copy_link\n";
             break;
         case 2:
+            system("clear");
             cout<<"\nProgetti ancora non disponibili...\n";
             break;
         case 3:
+            system("clear");
             cout<<"\nLink del programma open source: \n";
             cout<<"https://github.com/AleStoCactus/unige_centralized\n";
             break;
         default:
-            cout<<"\nOpzione non valida\n";
+            system("clear");
+            cout<<"\nOpzione scelta non valida\n";
             break;
+
     }
 }
 
